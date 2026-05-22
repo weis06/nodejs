@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title><%= pageTitle %></title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Додати користувача</a> | <a href="/users">Всі користувачі</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Список користувачів:</h1>
+        <% if (users.length > 0) { %>
+            <ul>
+                <% users.forEach(user => { %>
+                    <li><%= user.name %></li>
+                <% }); %>
+            </ul>
+        <% } else { %>
+            <p>Користувачів ще не додано.</p>
+        <% } %>
+    </main>
+</body>
+</html>
